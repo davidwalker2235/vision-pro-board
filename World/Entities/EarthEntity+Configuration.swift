@@ -1,10 +1,3 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-Configuration information for Earth entities.
-*/
-
 import SwiftUI
 
 extension EarthEntity {
@@ -42,19 +35,6 @@ extension EarthEntity {
             axActions: AccessibilityActions.rotate,
             axDescribeTilt: true
         )
-
-        static var orbitEarthDefault: Configuration = .init(
-            scale: 0.4,
-            speed: 0.1,
-            date: Date(),
-            axActions: AccessibilityActions.zoom)
-
-        static var solarEarthDefault: Configuration = .init(
-            isCloudy: true,
-            scale: 4.6,
-            speed: 0.045,
-            position: [-2, 0.4, -5],
-            date: Date())
     }
 
     /// Custom actions available to people using assistive technologies.

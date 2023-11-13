@@ -38,12 +38,5 @@ struct WorldApp: App {
     }
     
     init() {
-        // Register all the custom components and systems that the app uses.
-        RotationComponent.registerComponent()
-        RotationSystem.registerSystem()
-        TraceComponent.registerComponent()
-        TraceSystem.registerSystem()
-        SunPositionComponent.registerComponent()
-        SunPositionSystem.registerSystem()
     }
 }

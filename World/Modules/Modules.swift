@@ -28,33 +28,13 @@ struct Modules: View {
                             .navigationTitle(module.eyebrow)
                     }
             }
-            .opacity(model.isShowingSolar ? 0 : 1)
         }
-        .animation(.default, value: model.isShowingSolar)
 
         // Close any open detail view when returning to the table of contents.
         .onChange(of: model.navigationPath) { _, path in
             if path.isEmpty {
                 if model.isShowingGlobe {
                     dismissWindow(id: Module.report.name)
-                }
-                if model.isShowingOrbit || model.isShowingSolar {
-                    Task {
-                        await dismissImmersiveSpace()
-                    }
-                }
-            }
-        }
-
-        // If someone closes the main window when viewing the solar system,
-        // dismiss the immersive space and reopen the main window. In other
-        // words, treat closing the control panel the same as tapping the
-        // button to exit the solar system.
-        .onChange(of: scenePhase) { _, newPhase in
-            if model.isShowingSolar && newPhase == .background {
-                Task {
-                    await dismissImmersiveSpace()
-                    openWindow(id: "modules")
                 }
             }
         }

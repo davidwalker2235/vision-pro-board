@@ -48,14 +48,6 @@ class EarthEntity: Entity {
         // Set a static rotation of the tilted Earth, driven from the configuration.
         rotator.orientation = configuration.rotation
 
-        // Set the speed of the Earth's automatic rotation on it's axis.
-        if var rotation: RotationComponent = earth.components[RotationComponent.self] {
-            rotation.speed = configuration.currentSpeed
-            earth.components[RotationComponent.self] = rotation
-        } else {
-            earth.components.set(RotationComponent(speed: configuration.currentSpeed))
-        }
-
         pole.isEnabled = configuration.showPoles
         pole.scale = [
             configuration.poleThickness,

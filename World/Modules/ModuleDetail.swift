@@ -63,7 +63,6 @@ struct ModuleDetail: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .padding(70)
-        .settingsButton(module: module)
    }
 }
 

@@ -48,7 +48,5 @@ struct Radiography: View {
 }
 
 #Preview {
-    Radiography(
-        earthConfiguration: EarthEntity.Configuration.orbitEarthDefault
-    )
+    Radiography()
 }

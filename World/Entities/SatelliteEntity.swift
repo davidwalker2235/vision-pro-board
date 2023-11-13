@@ -37,8 +37,6 @@ class SatelliteEntity: Entity {
         name = configuration.name
         isEnabled = configuration.isVisible
 
-        // The entity that creates the satellite's orbit using a rotation component.
-        orbit.components.set(RotationComponent(speed: 0))
         orbit.orientation = .init(angle: Float(configuration.initialRotation.radians), axis: [0, 1, 0])
         self.addChild(orbit)
 
@@ -64,19 +62,9 @@ class SatelliteEntity: Entity {
         orientation = newOrientation
         isEnabled = configuration.isVisible
 
-        if var rotation: RotationComponent = orbit.components[RotationComponent.self] {
-            rotation.speed = configuration.speedRatio * speed
-            orbit.components[RotationComponent.self] = rotation
-        }
-
         box.scale = SIMD3(repeating: configuration.scale)
         box.position = [0, 0, configuration.altitude]
 
-        satellite.updateTrace(
-            anchor: traceAnchor,
-            width: configuration.traceWidth,
-            isVisible: configuration.isTraceVisible,
-            isPaused: (configuration.speedRatio * speed) == 0)
         if resetTrace {
             satellite.resetTrace()
         }
