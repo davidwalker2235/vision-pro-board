@@ -34,13 +34,6 @@ struct GlobeControls: View {
                 Toggle(isOn: $model.isGlobeRotating) {
                     Label("Rotate", systemImage: "arrow.triangle.2.circlepath")
                 }
-
-                Toggle(isOn: $isTiltPickerVisible) {
-                    Label("Tilt", systemImage: "cloud.sun.fill")
-                }
-                .alignmentGuide(.tiltButtonGuide) { context in
-                    context[HorizontalAlignment.center]
-                }
             }
             .toggleStyle(.button)
             .buttonStyle(.borderless)

@@ -1,0 +1,23 @@
+{
+  "F6BBF2BC-0DEB-4133-83DD-54F7E600104B" : {
+    "objectMetadataList" : [
+      [
+        "F6BBF2BC-0DEB-4133-83DD-54F7E600104B",
+        "Root",
+        "arm_bones"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "F6BBF2BC-0DEB-4133-83DD-54F7E600104B",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}

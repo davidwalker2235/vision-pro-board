@@ -32,13 +32,13 @@ struct ModuleDetail: View {
                             .accessibilitySortPriority(3)
 
                         switch module {
-                        case .globe:
-                            GlobeToggle()
-                        case .orbit:
-                            OrbitToggle()
-                                .accessibilitySortPriority(2)
-                        case .solar:
+                        case .report:
                             SolarSystemToggle()
+                        case .radiography:
+                            GlobeToggle()
+                                .accessibilitySortPriority(2)
+                        case .drugs:
+                            OrbitToggle()
                         }
                     }
                     .frame(width: textWidth, alignment: .leading)
@@ -52,7 +52,7 @@ struct ModuleDetail: View {
         }
         .padding(70)
         .background {
-            if module == .solar {
+            if module == .drugs {
                 Image("SolarBackground")
                     .resizable()
                     .scaledToFill()
@@ -70,30 +70,30 @@ extension Module {
     @ViewBuilder
     fileprivate var detailView: some View {
         switch self {
-        case .globe: GlobeModule()
-        case .orbit: OrbitModule()
-        case .solar: SolarSystemModule()
+        case .report: GlobeModule()
+        case .radiography: OrbitModule()
+        case .drugs: SolarSystemModule()
         }
     }
 }
 
 #Preview("Globe") {
     NavigationStack {
-        ModuleDetail(module: .globe)
+        ModuleDetail(module: .report)
             .environment(ViewModel())
     }
 }
 
 #Preview("Orbit") {
     NavigationStack {
-        ModuleDetail(module: .orbit)
+        ModuleDetail(module: .radiography)
             .environment(ViewModel())
     }
 }
 
 #Preview("Solar System") {
     NavigationStack {
-        ModuleDetail(module: .solar)
+        ModuleDetail(module: .drugs)
             .environment(ViewModel())
     }
 }

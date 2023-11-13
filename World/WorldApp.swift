@@ -20,14 +20,14 @@ struct WorldApp: App {
 
     var body: some Scene {
         // The main window that presents the app's modules.
-        WindowGroup("Hello World", id: "modules") {
+        WindowGroup("Patien", id: "modules") {
             Modules()
                 .environment(model)
         }
         .windowStyle(.plain)
 
         // A volume that displays a globe.
-        WindowGroup(id: Module.globe.name) {
+        WindowGroup(id: Module.report.name) {
             Globe()
                 .environment(model)
         }
@@ -36,7 +36,7 @@ struct WorldApp: App {
 
         // An immersive space that places the Earth with some of its satellites
         // in your surroundings.
-        ImmersiveSpace(id: Module.orbit.name) {
+        ImmersiveSpace(id: Module.radiography.name) {
             Orbit()
                 .environment(model)
         }
@@ -44,7 +44,7 @@ struct WorldApp: App {
 
         // An immersive Space that shows the Earth, Moon, and Sun as seen from
         // Earth orbit.
-        ImmersiveSpace(id: Module.solar.name) {
+        ImmersiveSpace(id: Module.drugs.name) {
             SolarSystem()
                 .environment(model)
         }

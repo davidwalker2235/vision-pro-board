@@ -34,9 +34,9 @@ struct ModuleCard: View {
 
 #Preview {
     HStack {
-        ModuleCard(module: .globe)
-        ModuleCard(module: .orbit)
-        ModuleCard(module: .solar)
+        ModuleCard(module: .report)
+        ModuleCard(module: .radiography)
+        ModuleCard(module: .drugs)
     }
     .padding()
     .glassBackgroundEffect()

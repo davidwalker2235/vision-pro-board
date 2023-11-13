@@ -16,12 +16,12 @@ struct GlobeToggle: View {
     var body: some View {
         @Bindable var model = model
 
-        Toggle(Module.globe.callToAction, isOn: $model.isShowingGlobe)
+        Toggle(Module.report.callToAction, isOn: $model.isShowingGlobe)
             .onChange(of: model.isShowingGlobe) { _, isShowing in
                 if isShowing {
-                    openWindow(id: Module.globe.name)
+                    openWindow(id: Module.report.name)
                 } else {
-                    dismissWindow(id: Module.globe.name)
+                    dismissWindow(id: Module.report.name)
                 }
             }
             .toggleStyle(.button)

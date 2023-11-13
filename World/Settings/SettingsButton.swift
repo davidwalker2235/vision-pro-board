@@ -61,9 +61,9 @@ extension Module {
     @ViewBuilder
     fileprivate var settingsView: some View {
         switch self {
-        case .globe: GlobeSettings()
-        case .orbit: OrbitSettings()
-        case .solar: SolarSystemSettings()
+        case .report: GlobeSettings()
+        case .radiography: OrbitSettings()
+        case .drugs: SolarSystemSettings()
         }
     }
 }

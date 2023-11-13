@@ -16,11 +16,11 @@ struct OrbitToggle: View {
     var body: some View {
         @Bindable var model = model
 
-        Toggle(Module.orbit.callToAction, isOn: $model.isShowingOrbit)
+        Toggle(Module.radiography.callToAction, isOn: $model.isShowingOrbit)
             .onChange(of: model.isShowingOrbit) { _, isShowing in
                 Task {
                     if isShowing {
-                        await openImmersiveSpace(id: Module.orbit.name)
+                        await openImmersiveSpace(id: Module.radiography.name)
                     } else {
                         await dismissImmersiveSpace()
                     }

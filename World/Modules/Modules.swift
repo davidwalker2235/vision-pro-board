@@ -40,7 +40,7 @@ struct Modules: View {
         .onChange(of: model.navigationPath) { _, path in
             if path.isEmpty {
                 if model.isShowingGlobe {
-                    dismissWindow(id: Module.globe.name)
+                    dismissWindow(id: Module.report.name)
                 }
                 if model.isShowingOrbit || model.isShowingSolar {
                     Task {

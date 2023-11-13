@@ -19,7 +19,7 @@ struct SolarSystemToggle: View {
                 if model.isShowingSolar {
                     await dismissImmersiveSpace()
                 } else {
-                    await openImmersiveSpace(id: Module.solar.name)
+                    await openImmersiveSpace(id: Module.drugs.name)
                 }
             }
         } label: {
@@ -28,7 +28,7 @@ struct SolarSystemToggle: View {
                     "Exit the Solar System",
                     systemImage: "arrow.down.right.and.arrow.up.left")
             } else {
-                Text(Module.solar.callToAction)
+                Text(Module.drugs.callToAction)
             }
         }
     }
