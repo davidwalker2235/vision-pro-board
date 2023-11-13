@@ -11,5 +11,4 @@ class ViewModel {
     var isShowingGlobe: Bool = false
     var globeEarth: EarthEntity.Configuration = .globeEarthDefault
     var isGlobeRotating: Bool = false
-    var globeTilt: GlobeTilt = .none
 }

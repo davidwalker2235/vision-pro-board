@@ -12,7 +12,6 @@ import WorldAssets
 /// The model of the Earth.
 struct Radiography: View {
     var earthConfiguration: EarthEntity.Configuration = .init()
-    var moonConfiguration: SatelliteEntity.Configuration? = nil
     var animateUpdates: Bool = false
     var axCustomActionHandler: ((_: AccessibilityEvents.CustomAction) -> Void)? = nil
 
