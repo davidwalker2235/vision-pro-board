@@ -8,7 +8,7 @@ The module detail content that's specific to the globe module.
 import SwiftUI
 
 /// The module detail content that's specific to the globe module.
-struct GlobeModule: View {
+struct ReportModule: View {
     var body: some View {
         Image("DavidCarmona")
             .resizable()
@@ -17,6 +17,6 @@ struct GlobeModule: View {
 }
 
 #Preview {
-    GlobeModule()
+    ReportModule()
         .padding()
 }

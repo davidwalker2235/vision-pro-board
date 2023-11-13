@@ -8,15 +8,15 @@ The module detail content that's specific to the solar system module.
 import SwiftUI
 
 /// The module detail content that's specific to the solar system module.
-struct SolarSystemModule: View {
+struct DrugsModule: View {
     var body: some View {
-        Image("SolarHero")
+        Image("drugs")
             .resizable()
             .scaledToFit()
     }
 }
 
 #Preview {
-    SolarSystemModule()
+    DrugsModule()
         .padding()
 }

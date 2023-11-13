@@ -8,7 +8,7 @@ A toggle that activates or deactivates the globe volume.
 import SwiftUI
 
 /// A toggle that activates or deactivates the globe volume.
-struct GlobeToggle: View {
+struct RadiographyToggle: View {
     @Environment(ViewModel.self) private var model
     @Environment(\.openWindow) private var openWindow
     @Environment(\.dismissWindow) private var dismissWindow
@@ -29,6 +29,6 @@ struct GlobeToggle: View {
 }
 
 #Preview {
-    GlobeToggle()
+    RadiographyToggle()
         .environment(ViewModel())
 }
