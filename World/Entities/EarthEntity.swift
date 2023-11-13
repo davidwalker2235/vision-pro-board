@@ -1,10 +1,3 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-An entity that represents the Earth and all its moving parts.
-*/
-
 import RealityKit
 import SwiftUI
 import WorldAssets
@@ -12,54 +5,18 @@ import WorldAssets
 /// An entity that represents the Earth and all its moving parts.
 class EarthEntity: Entity {
 
-    // MARK: - Sub-entities
-
-    /// The model that draws the Earth's surface features.
     private var earth: Entity = Entity()
-
-    /// An entity that rotates 23.5° to create axial tilt.
     private let equatorialPlane = Entity()
-
-    /// An entity that provides a configurable rotation,
-    /// separate from the day/night cycle.
     private let rotator = Entity()
-
-    /// A physical representation of the Earth's north and south poles.
     private var pole: Entity = Entity()
-
-    /// The Earth's one natural satellite.
-    private var moon: SatelliteEntity = SatelliteEntity()
-
-    /// A container for artificial satellites.
-    private let satellites = Entity()
-
-    // MARK: - Internal state
-
-    /// Keep track of solar intensity and only update when it changes.
     private var currentSunIntensity: Float? = nil
 
-    // MARK: - Initializers
-
-    /// Creates a new blank earth entity.
     @MainActor required init() {
         super.init()
     }
 
-    /// Creates a new earth entity with the specified configuration.
-    ///
-    /// - Parameters:
-    ///   - configuration: Information about how to configure the Earth.
-    ///   - satelliteConfiguration: An array of configuration structures, one
-    ///     for each artificial satellite. The initializer creates one
-    ///     satellite model for each element of the array. Pass an empty
-    ///     array to avoid creating any artificial satellites.
-    ///   - moonConfiguration: A satellite configuration structure that's
-    ///     specifically for the Moon. Set to `nil` to avoid creating a
-    ///     Moon entity.
     init(
-        configuration: Configuration,
-        satelliteConfiguration: [SatelliteEntity.Configuration],
-        moonConfiguration: SatelliteEntity.Configuration?
+        configuration: Configuration
     ) async {
         super.init()
 
@@ -69,55 +26,19 @@ class EarthEntity: Entity {
         self.earth = earth
         self.pole = pole
 
-        // Create satellites.
-        for configuration in satelliteConfiguration {
-            await satellites.addChild(SatelliteEntity(configuration))
-        }
-
-        // Attach to the Earth to a set of entities that enable axial
-        // tilt and a configured amount of rotation around the axis.
         self.addChild(equatorialPlane)
         equatorialPlane.addChild(rotator)
         rotator.addChild(earth)
 
-        // Attach the pole to the Earth to ensure that it
-        // moves, tilts, rotates, and scales with the Earth.
         earth.addChild(pole)
 
-        // The Moon's orbit isn't affected by the tilt of the Earth, so attach
-        // the Moon to the root entity.
-        moon = await SatelliteEntity(.orbitMoonDefault)
-        self.addChild(moon)
-
-        // The inclination of artificial satellite orbits is measured relative
-        // to the Earth's equator, so attach the satellite container to the
-        // equatorial plane entity.
-        equatorialPlane.addChild(satellites)
-
-        // Configure everything for the first time.
         update(
             configuration: configuration,
-            satelliteConfiguration: satelliteConfiguration,
-            moonConfiguration: moonConfiguration,
             animateUpdates: false)
     }
 
-    // MARK: - Updates
-
-    /// Updates all the entity's configurable elements.
-    ///
-    /// - Parameters:
-    ///   - configuration: Information about how to configure the Earth.
-    ///   - satelliteConfiguration: An array of configuration structures, one
-    ///     for each artificial satellite.
-    ///   - moonConfiguration: A satellite configuration structure that's
-    ///     specifically for the Moon.
-    ///   - animateUpdates: A Boolean that indicates whether changes to certain
-    ///     configuration values should be animated.
     func update(
         configuration: Configuration,
-        satelliteConfiguration: [SatelliteEntity.Configuration],
-        moonConfiguration: SatelliteEntity.Configuration?,
         animateUpdates: Bool
     ) {
         // Indicate the position of the sun for use in turning the ground
@@ -135,22 +56,6 @@ class EarthEntity: Entity {
             earth.components.set(RotationComponent(speed: configuration.currentSpeed))
         }
 
-        // Update the Moon.
-        moon.update(
-            configuration: moonConfiguration ?? .disabledMoon,
-            speed: configuration.currentSpeed,
-            traceAnchor: self)
-
-        // Update the artificial satellites.
-        for satellite in satellites.children {
-            guard let satelliteConfiguration = satelliteConfiguration.first(where: { $0.name == satellite.name }) else { continue }
-            (satellite as? SatelliteEntity)?.update(
-                configuration: satelliteConfiguration,
-                speed: configuration.currentSpeed,
-                traceAnchor: earth)
-        }
-
-        // Configure the poles.
         pole.isEnabled = configuration.showPoles
         pole.scale = [
             configuration.poleThickness,
@@ -184,24 +89,11 @@ class EarthEntity: Entity {
 
         // Set an accessibility component on the entity.
         components.set(makeAxComponent(
-            configuration: configuration,
-            satelliteConfiguration: satelliteConfiguration,
-            moonConfiguration: moonConfiguration))
+            configuration: configuration))
     }
 
-    /// Create an accessibility component suitable for the Earth entity.
-    ///
-    /// - Parameters:
-    ///   - configuration: Information about how to configure the Earth.
-    ///   - satelliteConfiguration: An array of configuration structures, one
-    ///     for each artificial satellite.
-    ///   - moonConfiguration: A satellite configuration structure that's
-    ///     specifically for the Moon.
-    /// - Returns: A new accessibility component.
     private func makeAxComponent(
-        configuration: Configuration,
-        satelliteConfiguration: [SatelliteEntity.Configuration],
-        moonConfiguration: SatelliteEntity.Configuration?
+        configuration: Configuration
     ) -> AccessibilityComponent {
         // Create an accessibility component.
         var axComponent = AccessibilityComponent()
@@ -223,12 +115,7 @@ class EarthEntity: Entity {
         if configuration.showPoles {
             axValue.append("with the poles indicated, ")
         }
-        for item in satelliteConfiguration.map({ $0.name }) {
-            axValue.append("a \(item) orbits close to the earth, ")
-        }
-        if moonConfiguration != nil {
-            axValue.append("the moon orbits at some distance from the earth.")
-        }
+
         axComponent.value = LocalizedStringResource(stringLiteral: axValue)
 
         // Add custom accessibility actions, if applicable.

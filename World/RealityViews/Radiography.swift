@@ -12,7 +12,6 @@ import WorldAssets
 /// The model of the Earth.
 struct Radiography: View {
     var earthConfiguration: EarthEntity.Configuration = .init()
-    var satelliteConfiguration: [SatelliteEntity.Configuration] = []
     var moonConfiguration: SatelliteEntity.Configuration? = nil
     var animateUpdates: Bool = false
     var axCustomActionHandler: ((_: AccessibilityEvents.CustomAction) -> Void)? = nil
@@ -24,9 +23,7 @@ struct Radiography: View {
         RealityView { content in
             // Create an earth entity with tilt, rotation, a moon, and so on.
             let earthEntity = await EarthEntity(
-                configuration: earthConfiguration,
-                satelliteConfiguration: satelliteConfiguration,
-                moonConfiguration: moonConfiguration)
+                configuration: earthConfiguration)
             content.add(earthEntity)
 
             // Handle custom accessibility events.
@@ -45,8 +42,6 @@ struct Radiography: View {
             // Reconfigure everything when any configuration changes.
             earthEntity?.update(
                 configuration: earthConfiguration,
-                satelliteConfiguration: satelliteConfiguration,
-                moonConfiguration: moonConfiguration,
                 animateUpdates: animateUpdates)
         }
     }
@@ -54,17 +49,6 @@ struct Radiography: View {
 
 #Preview {
     Radiography(
-        earthConfiguration: EarthEntity.Configuration.orbitEarthDefault,
-        satelliteConfiguration: [
-            SatelliteEntity.Configuration(
-                name: "Satellite",
-                isVisible: true,
-                inclination: .degrees(30),
-                speedRatio: 10,
-                scale: 1,
-                altitude: 0.4,
-                traceWidth: 400,
-                isTraceVisible: true)
-        ]
+        earthConfiguration: EarthEntity.Configuration.orbitEarthDefault
     )
 }
