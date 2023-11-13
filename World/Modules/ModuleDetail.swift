@@ -22,23 +22,35 @@ struct ModuleDetail: View {
             ZStack {
                 HStack(spacing: 60) {
                     VStack(alignment: .leading, spacing: 0) {
-                        Text(module.heading)
-                            .font(.system(size: 50, weight: .bold))
-                            .padding(.bottom, 15)
-                            .accessibilitySortPriority(4)
-
-                        Text(module.overview)
-                            .padding(.bottom, 30)
-                            .accessibilitySortPriority(3)
-
                         switch module {
                         case .report:
-                            SolarSystemToggle()
+                            Text(Patiens[0].name)
+                                .font(.system(size: 50, weight: .bold))
+                                .padding(.bottom, 15)
+                                .accessibilitySortPriority(4)
+                            ScrollView(.vertical) {
+                                Text(module.overview).padding(50)
+                            }
                         case .radiography:
-                            GlobeToggle()
+                            Text(module.heading)
+                                .font(.system(size: 50, weight: .bold))
+                                .padding(.bottom, 15)
+                                .accessibilitySortPriority(4)
+
+                            ScrollView {
+                                Text(module.overview)
+                                    .padding(.bottom, 30)
+                                    .accessibilitySortPriority(3)
+                            }.padding(20)
+                            RadiographyToggle()
                                 .accessibilitySortPriority(2)
                         case .drugs:
-                            OrbitToggle()
+                            Text(module.heading)
+                                .font(.system(size: 50, weight: .bold))
+                                .padding(.bottom, 15)
+                                .accessibilitySortPriority(4)
+
+                            DrugsList().frame(width: 490, height: 400)
                         }
                     }
                     .frame(width: textWidth, alignment: .leading)
@@ -51,17 +63,6 @@ struct ModuleDetail: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .padding(70)
-        .background {
-            if module == .drugs {
-                Image("SolarBackground")
-                    .resizable()
-                    .scaledToFill()
-                    .accessibility(hidden: true)
-            }
-        }
-
-        // A settings button in an ornament,
-        // visible only when `showDebugSettings` is true.
         .settingsButton(module: module)
    }
 }
@@ -70,28 +71,28 @@ extension Module {
     @ViewBuilder
     fileprivate var detailView: some View {
         switch self {
-        case .report: GlobeModule()
-        case .radiography: OrbitModule()
-        case .drugs: SolarSystemModule()
+        case .report: ReportModule()
+        case .radiography: RadiographyModule()
+        case .drugs: DrugsModule()
         }
     }
 }
 
-#Preview("Globe") {
+#Preview("Report") {
     NavigationStack {
         ModuleDetail(module: .report)
             .environment(ViewModel())
     }
 }
 
-#Preview("Orbit") {
+#Preview("Radiography") {
     NavigationStack {
         ModuleDetail(module: .radiography)
             .environment(ViewModel())
     }
 }
 
-#Preview("Solar System") {
+#Preview("Drugs") {
     NavigationStack {
         ModuleDetail(module: .drugs)
             .environment(ViewModel())

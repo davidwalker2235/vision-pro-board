@@ -1,9 +1,9 @@
-//
-//  DrugModel.swift
-//  World
-//
-//  Created by David Carmona Maroto on 13/11/23.
-//  Copyright © 2023 Apple. All rights reserved.
-//
-
 import Foundation
+import SwiftUI
+
+struct Drug {
+    var id: Int
+    var name: String
+    var image: Image
+    var value: Int
+}

@@ -239,14 +239,6 @@ class EarthEntity: Entity {
         return axComponent
     }
 
-    /// Calculates the orientation of the Earth's tilt on a specified date.
-    ///
-    /// This method assumes the sun appears at some distance from the Earth
-    /// along the negative x-axis.
-    ///
-    /// - Parameter date: The date that the Earth's tilt represents.
-    ///
-    /// - Returns: A representation of tilt that you apply to an Earth model.
     private func tilt(date: Date?) -> simd_quatf {
         // Assume a constant magnitude for the Earth's tilt angle.
         let tiltAngle: Angle = .degrees(date == nil ? 0 : 23.5)

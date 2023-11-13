@@ -8,7 +8,7 @@ The globe content for a volume.
 import SwiftUI
 
 /// The globe content for a volume.
-struct Globe: View {
+struct Bone: View {
     @Environment(ViewModel.self) private var model
 
     @State var axRotateClockwise: Bool = false
@@ -16,7 +16,7 @@ struct Globe: View {
 
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .controlPanelGuide, vertical: .bottom)) {
-            Earth(
+            Radiography(
                 earthConfiguration: model.globeEarth,
                 animateUpdates: true
             ) { event in
@@ -34,11 +34,11 @@ struct Globe: View {
                 context[HorizontalAlignment.center]
             }
 
-            GlobeControls()
+            BoneControls()
                 .offset(y: -70)
         }
         .onChange(of: model.isGlobeRotating) { _, isRotating in
-            model.globeEarth.speed = isRotating ? 0.1 : 0
+            model.globeEarth.speed = isRotating ? 0.5 : 0
         }
         .onDisappear {
             model.isShowingGlobe = false
@@ -61,6 +61,6 @@ extension HorizontalAlignment {
 }
 
 #Preview {
-    Globe()
+    Bone()
         .environment(ViewModel())
 }

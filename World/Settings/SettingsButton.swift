@@ -1,22 +1,5 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A modifier for adding a developer settings button.
-*/
-
 import SwiftUI
 
-/// A Boolean that determines the visibility of a debug settings button.
-///
-/// It can be helpful during development to have real time control over
-/// aspects of your app's models and content. For example, you might want
-/// to tune a scaling factor so a scaled entity feels just right when
-/// in Full Space. Set the `showDebugSettings` parameter to `true` to
-/// make a button appear as an ornament in the app's main window that enables
-/// you configure certain aspects of each module. You would set this to
-/// `false`, or remove the settings configuration logic entirely, before
-/// shipping the app.
 let showDebugSettings = false
 
 extension View {
@@ -30,7 +13,6 @@ extension View {
     }
 }
 
-/// A modifier that adds a button that opens a settings panel.
 private struct SettingsButtonModifier: ViewModifier {
     var module: Module
 

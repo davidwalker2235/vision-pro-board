@@ -20,10 +20,6 @@ struct Modules: View {
         @Bindable var model = model
 
         ZStack {
-            // Controls visible only when showing the solar system view.
-            SolarSystemControls()
-                .opacity(model.isShowingSolar ? 1 : 0)
-
             // The main navigation element for the app.
             NavigationStack(path: $model.navigationPath) {
                 TableOfContents()

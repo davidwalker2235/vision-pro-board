@@ -28,27 +28,13 @@ struct WorldApp: App {
 
         // A volume that displays a globe.
         WindowGroup(id: Module.report.name) {
-            Globe()
+            Bone()
                 .environment(model)
         }
         .windowStyle(.volumetric)
         .defaultSize(width: 0.6, height: 0.6, depth: 0.6, in: .meters)
 
-        // An immersive space that places the Earth with some of its satellites
-        // in your surroundings.
-        ImmersiveSpace(id: Module.radiography.name) {
-            Orbit()
-                .environment(model)
-        }
         .immersionStyle(selection: $orbitImmersionStyle, in: .mixed)
-
-        // An immersive Space that shows the Earth, Moon, and Sun as seen from
-        // Earth orbit.
-        ImmersiveSpace(id: Module.drugs.name) {
-            SolarSystem()
-                .environment(model)
-        }
-        .immersionStyle(selection: $solarImmersionStyle, in: .full)
     }
     
     init() {

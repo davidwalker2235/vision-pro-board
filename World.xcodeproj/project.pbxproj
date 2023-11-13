@@ -10,44 +10,41 @@
 		308479D62AFD4AF300864F3E /* PatientHeartBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308479D52AFD4AF300864F3E /* PatientHeartBeat.swift */; };
 		308479D82AFD4B9400864F3E /* HealthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308479D72AFD4B9400864F3E /* HealthData.swift */; };
 		308479DA2AFD4BA200864F3E /* Patiens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308479D92AFD4BA200864F3E /* Patiens.swift */; };
+		30C777EA2B023C3000463994 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C777E92B023C3000463994 /* Report.swift */; };
+		30C777EC2B0260CB00463994 /* DrugsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C777EB2B0260CB00463994 /* DrugsList.swift */; };
+		30C777EE2B02610800463994 /* Drugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C777ED2B02610800463994 /* Drugs.swift */; };
+		30C777F02B02613700463994 /* DrugModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C777EF2B02613700463994 /* DrugModel.swift */; };
 		30DBAA262AFE3E1600291226 /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBAA252AFE3E1600291226 /* PatientModel.swift */; };
 		C200227D2988392F00732240 /* Entity+Sunlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C200227C2988392F00732240 /* Entity+Sunlight.swift */; };
 		C200227F29883B3900732240 /* GlobeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C200227E29883B3900732240 /* GlobeSettings.swift */; };
 		C20197A429E3D9C900C6A20F /* SatelliteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20197A329E3D9C900C6A20F /* SatelliteEntity.swift */; };
 		C20197A629E4805900C6A20F /* SatelliteEntity+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20197A529E4805900C6A20F /* SatelliteEntity+Configuration.swift */; };
-		C205CF952919C70D0067444C /* Starfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205CF942919C70D0067444C /* Starfield.swift */; };
-		C205CF972919CD070067444C /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = C205CF962919CD070067444C /* Sun.swift */; };
 		C20A898F2A37D93C004E8608 /* Sunlight.skybox in Resources */ = {isa = PBXBuildFile; fileRef = C20A898E2A37D93C004E8608 /* Sunlight.skybox */; };
 		C22D1AF228EB403400CE0F8F /* WorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22D1AF128EB403400CE0F8F /* WorldApp.swift */; };
 		C22D1AF628EB403600CE0F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22D1AF528EB403600CE0F8F /* Assets.xcassets */; };
 		C22D1AF928EB403600CE0F8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22D1AF828EB403600CE0F8F /* Preview Assets.xcassets */; };
 		C253D5772947E44200B292CA /* OrbitSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C253D5762947E44200B292CA /* OrbitSettings.swift */; };
-		C255636A291D8A0300398FCE /* Orbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2556369291D8A0300398FCE /* Orbit.swift */; };
-		C25617D829CCB6040064FD50 /* SolarSystemControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25617D729CCB6040064FD50 /* SolarSystemControls.swift */; };
 		C25774D629E219FE00A75567 /* DragRotationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774D529E219FE00A75567 /* DragRotationModifier.swift */; };
 		C25774D829E2361000A75567 /* TypeTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774D729E2361000A75567 /* TypeTextModifier.swift */; };
-		C25774DB29E23F8D00A75567 /* GlobeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774DA29E23F8D00A75567 /* GlobeModule.swift */; };
-		C25774DE29E2401F00A75567 /* SolarSystemModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774DD29E2401F00A75567 /* SolarSystemModule.swift */; };
-		C25774E129E240EC00A75567 /* OrbitModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774E029E240EC00A75567 /* OrbitModule.swift */; };
+		C25774DB29E23F8D00A75567 /* ReportModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774DA29E23F8D00A75567 /* ReportModule.swift */; };
+		C25774DE29E2401F00A75567 /* DrugsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774DD29E2401F00A75567 /* DrugsModule.swift */; };
+		C25774E129E240EC00A75567 /* RadiographyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774E029E240EC00A75567 /* RadiographyModule.swift */; };
 		C258918F2975EB7E0071BD5F /* SliderGridRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258918E2975EB7E0071BD5F /* SliderGridRow.swift */; };
 		C2589191297625C90071BD5F /* PlacementGesturesModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2589190297625C90071BD5F /* PlacementGesturesModifier.swift */; };
 		C25AD07D29EC6C1E0012834D /* EarthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25AD07C29EC6C1E0012834D /* EarthEntity.swift */; };
-		C25E9E7828EBB5430033B333 /* Earth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E9E7728EBB5430033B333 /* Earth.swift */; };
+		C25E9E7828EBB5430033B333 /* Radiography.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E9E7728EBB5430033B333 /* Radiography.swift */; };
 		C25EFB7029DE7D1500D3CBB6 /* Entity+Trace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EFB6F29DE7D1500D3CBB6 /* Entity+Trace.swift */; };
 		C2A0F2B029D115150009D46C /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A0F2AF29D115150009D46C /* SettingsButton.swift */; };
-		C2A8235E2A858A1C006F6AFF /* SolarSystemToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8235D2A858A1C006F6AFF /* SolarSystemToggle.swift */; };
-		C2A823602A859109006F6AFF /* OrbitToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8235F2A859109006F6AFF /* OrbitToggle.swift */; };
-		C2A823622A8591FC006F6AFF /* GlobeToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A823612A8591FC006F6AFF /* GlobeToggle.swift */; };
+		C2A823622A8591FC006F6AFF /* RadiographyToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A823612A8591FC006F6AFF /* RadiographyToggle.swift */; };
 		C2A8375F2A2527DB00AD11D6 /* WorldAssets in Frameworks */ = {isa = PBXBuildFile; productRef = C2A8375E2A2527DB00AD11D6 /* WorldAssets */; };
 		C2B0AEED2994B35600021509 /* RotationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B0AEEC2994B35600021509 /* RotationSystem.swift */; };
 		C2B0AEEF2994B39300021509 /* TraceSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B0AEEE2994B39300021509 /* TraceSystem.swift */; };
 		C2C1C8DB29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1C8DA29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift */; };
 		C2CD36432A3A7682003811D3 /* ModuleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD36422A3A7682003811D3 /* ModuleCard.swift */; };
-		C2D21553294D210B00634A99 /* Globe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D21552294D210B00634A99 /* Globe.swift */; };
-		C2DEDA242996FAAB00F5265B /* GlobeControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DEDA232996FAAB00F5265B /* GlobeControls.swift */; };
+		C2D21553294D210B00634A99 /* Bone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D21552294D210B00634A99 /* Bone.swift */; };
+		C2DEDA242996FAAB00F5265B /* BoneControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DEDA232996FAAB00F5265B /* BoneControls.swift */; };
 		C2E652D42919E41A007934BC /* SolarSystemSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E652D32919E41A007934BC /* SolarSystemSettings.swift */; };
 		C2E652D62919EBAB007934BC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E652D52919EBAB007934BC /* ViewModel.swift */; };
-		C2E652D8291B09AC007934BC /* SolarSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E652D7291B09AC007934BC /* SolarSystem.swift */; };
 		C2F2CA342A391D4200E1C2A2 /* EarthSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F2CA332A391D4200E1C2A2 /* EarthSettings.swift */; };
 		C2F2CA362A391D6B00E1C2A2 /* SatelliteSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F2CA352A391D6B00E1C2A2 /* SatelliteSettings.swift */; };
 		C2F31EF829CA8F4E009742AD /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F31EF729CA8F4E009742AD /* Modules.swift */; };
@@ -60,6 +57,10 @@
 		308479D52AFD4AF300864F3E /* PatientHeartBeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientHeartBeat.swift; sourceTree = "<group>"; };
 		308479D72AFD4B9400864F3E /* HealthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthData.swift; sourceTree = "<group>"; };
 		308479D92AFD4BA200864F3E /* Patiens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patiens.swift; sourceTree = "<group>"; };
+		30C777E92B023C3000463994 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		30C777EB2B0260CB00463994 /* DrugsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsList.swift; sourceTree = "<group>"; };
+		30C777ED2B02610800463994 /* Drugs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drugs.swift; sourceTree = "<group>"; };
+		30C777EF2B02613700463994 /* DrugModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugModel.swift; sourceTree = "<group>"; };
 		30DBAA252AFE3E1600291226 /* PatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
 		6FD03BD460C2666C0917AC9F /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		BA5D813EE652D2B6F9AA7B35 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
@@ -67,8 +68,6 @@
 		C200227E29883B3900732240 /* GlobeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeSettings.swift; sourceTree = "<group>"; };
 		C20197A329E3D9C900C6A20F /* SatelliteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteEntity.swift; sourceTree = "<group>"; };
 		C20197A529E4805900C6A20F /* SatelliteEntity+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SatelliteEntity+Configuration.swift"; sourceTree = "<group>"; };
-		C205CF942919C70D0067444C /* Starfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starfield.swift; sourceTree = "<group>"; };
-		C205CF962919CD070067444C /* Sun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
 		C20A898E2A37D93C004E8608 /* Sunlight.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = Sunlight.skybox; sourceTree = "<group>"; };
 		C22D1AEE28EB403400CE0F8F /* World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = World.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22D1AF128EB403400CE0F8F /* WorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldApp.swift; sourceTree = "<group>"; };
@@ -76,33 +75,28 @@
 		C22D1AF828EB403600CE0F8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C22D1AFA28EB403600CE0F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C253D5762947E44200B292CA /* OrbitSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitSettings.swift; sourceTree = "<group>"; };
-		C2556369291D8A0300398FCE /* Orbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orbit.swift; sourceTree = "<group>"; };
-		C25617D729CCB6040064FD50 /* SolarSystemControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystemControls.swift; sourceTree = "<group>"; };
 		C25774D529E219FE00A75567 /* DragRotationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragRotationModifier.swift; sourceTree = "<group>"; };
 		C25774D729E2361000A75567 /* TypeTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTextModifier.swift; sourceTree = "<group>"; };
-		C25774DA29E23F8D00A75567 /* GlobeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeModule.swift; sourceTree = "<group>"; };
-		C25774DD29E2401F00A75567 /* SolarSystemModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystemModule.swift; sourceTree = "<group>"; };
-		C25774E029E240EC00A75567 /* OrbitModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitModule.swift; sourceTree = "<group>"; };
+		C25774DA29E23F8D00A75567 /* ReportModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportModule.swift; sourceTree = "<group>"; };
+		C25774DD29E2401F00A75567 /* DrugsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsModule.swift; sourceTree = "<group>"; };
+		C25774E029E240EC00A75567 /* RadiographyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiographyModule.swift; sourceTree = "<group>"; };
 		C258918E2975EB7E0071BD5F /* SliderGridRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderGridRow.swift; sourceTree = "<group>"; };
 		C2589190297625C90071BD5F /* PlacementGesturesModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementGesturesModifier.swift; sourceTree = "<group>"; };
 		C25A1C9C28EB495E00B0E173 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C25AD07C29EC6C1E0012834D /* EarthEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthEntity.swift; sourceTree = "<group>"; };
-		C25E9E7728EBB5430033B333 /* Earth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Earth.swift; sourceTree = "<group>"; };
+		C25E9E7728EBB5430033B333 /* Radiography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radiography.swift; sourceTree = "<group>"; };
 		C25EFB6F29DE7D1500D3CBB6 /* Entity+Trace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+Trace.swift"; sourceTree = "<group>"; };
 		C2A0F2AF29D115150009D46C /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
-		C2A8235D2A858A1C006F6AFF /* SolarSystemToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystemToggle.swift; sourceTree = "<group>"; };
-		C2A8235F2A859109006F6AFF /* OrbitToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitToggle.swift; sourceTree = "<group>"; };
-		C2A823612A8591FC006F6AFF /* GlobeToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeToggle.swift; sourceTree = "<group>"; };
+		C2A823612A8591FC006F6AFF /* RadiographyToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiographyToggle.swift; sourceTree = "<group>"; };
 		C2A837612A25286A00AD11D6 /* WorldAssets */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WorldAssets; sourceTree = "<group>"; };
 		C2B0AEEC2994B35600021509 /* RotationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationSystem.swift; sourceTree = "<group>"; };
 		C2B0AEEE2994B39300021509 /* TraceSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraceSystem.swift; sourceTree = "<group>"; };
 		C2C1C8DA29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EarthEntity+Configuration.swift"; sourceTree = "<group>"; };
 		C2CD36422A3A7682003811D3 /* ModuleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleCard.swift; sourceTree = "<group>"; };
-		C2D21552294D210B00634A99 /* Globe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globe.swift; sourceTree = "<group>"; };
-		C2DEDA232996FAAB00F5265B /* GlobeControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeControls.swift; sourceTree = "<group>"; };
+		C2D21552294D210B00634A99 /* Bone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bone.swift; sourceTree = "<group>"; };
+		C2DEDA232996FAAB00F5265B /* BoneControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoneControls.swift; sourceTree = "<group>"; };
 		C2E652D32919E41A007934BC /* SolarSystemSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystemSettings.swift; sourceTree = "<group>"; };
 		C2E652D52919EBAB007934BC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		C2E652D7291B09AC007934BC /* SolarSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarSystem.swift; sourceTree = "<group>"; };
 		C2F2CA332A391D4200E1C2A2 /* EarthSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthSettings.swift; sourceTree = "<group>"; };
 		C2F2CA352A391D6B00E1C2A2 /* SatelliteSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteSettings.swift; sourceTree = "<group>"; };
 		C2F31EF729CA8F4E009742AD /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
@@ -128,6 +122,7 @@
 			children = (
 				308479D72AFD4B9400864F3E /* HealthData.swift */,
 				308479D92AFD4BA200864F3E /* Patiens.swift */,
+				30C777ED2B02610800463994 /* Drugs.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -168,6 +163,7 @@
 				C2E652D52919EBAB007934BC /* ViewModel.swift */,
 				C2F31EFD29CC02D7009742AD /* Module.swift */,
 				30DBAA252AFE3E1600291226 /* PatientModel.swift */,
+				30C777EF2B02613700463994 /* DrugModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,9 +195,9 @@
 				308479CB2AFD323300864F3E /* Data */,
 				C22D1AF128EB403400CE0F8F /* WorldApp.swift */,
 				C2DEDA222996F5ED00F5265B /* Modules */,
-				C25774D929E23F7400A75567 /* Globe */,
-				C25774DF29E2404500A75567 /* Orbit */,
-				C25774DC29E23FD000A75567 /* Solar System */,
+				C25774D929E23F7400A75567 /* Report */,
+				C25774DF29E2404500A75567 /* Radiography */,
+				C25774DC29E23FD000A75567 /* Drugs */,
 				C2A51FB229AB2E5800217068 /* RealityViews */,
 				C22CF1A829721FB100CF2EB7 /* Entities */,
 				C2A51FAB29AA902A00217068 /* Systems */,
@@ -223,36 +219,33 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		C25774D929E23F7400A75567 /* Globe */ = {
+		C25774D929E23F7400A75567 /* Report */ = {
 			isa = PBXGroup;
 			children = (
-				C2D21552294D210B00634A99 /* Globe.swift */,
-				C2DEDA232996FAAB00F5265B /* GlobeControls.swift */,
-				C25774DA29E23F8D00A75567 /* GlobeModule.swift */,
-				C2A823612A8591FC006F6AFF /* GlobeToggle.swift */,
+				C25774DA29E23F8D00A75567 /* ReportModule.swift */,
+				30C777E92B023C3000463994 /* Report.swift */,
 			);
-			path = Globe;
+			path = Report;
 			sourceTree = "<group>";
 		};
-		C25774DC29E23FD000A75567 /* Solar System */ = {
+		C25774DC29E23FD000A75567 /* Drugs */ = {
 			isa = PBXGroup;
 			children = (
-				C2E652D7291B09AC007934BC /* SolarSystem.swift */,
-				C25617D729CCB6040064FD50 /* SolarSystemControls.swift */,
-				C25774DD29E2401F00A75567 /* SolarSystemModule.swift */,
-				C2A8235D2A858A1C006F6AFF /* SolarSystemToggle.swift */,
+				C25774DD29E2401F00A75567 /* DrugsModule.swift */,
+				30C777EB2B0260CB00463994 /* DrugsList.swift */,
 			);
-			path = "Solar System";
+			path = Drugs;
 			sourceTree = "<group>";
 		};
-		C25774DF29E2404500A75567 /* Orbit */ = {
+		C25774DF29E2404500A75567 /* Radiography */ = {
 			isa = PBXGroup;
 			children = (
-				C2556369291D8A0300398FCE /* Orbit.swift */,
-				C25774E029E240EC00A75567 /* OrbitModule.swift */,
-				C2A8235F2A859109006F6AFF /* OrbitToggle.swift */,
+				C2D21552294D210B00634A99 /* Bone.swift */,
+				C2DEDA232996FAAB00F5265B /* BoneControls.swift */,
+				C2A823612A8591FC006F6AFF /* RadiographyToggle.swift */,
+				C25774E029E240EC00A75567 /* RadiographyModule.swift */,
 			);
-			path = Orbit;
+			path = Radiography;
 			sourceTree = "<group>";
 		};
 		C2589192297625D90071BD5F /* Modifiers */ = {
@@ -286,9 +279,7 @@
 		C2A51FB229AB2E5800217068 /* RealityViews */ = {
 			isa = PBXGroup;
 			children = (
-				C25E9E7728EBB5430033B333 /* Earth.swift */,
-				C205CF962919CD070067444C /* Sun.swift */,
-				C205CF942919C70D0067444C /* Starfield.swift */,
+				C25E9E7728EBB5430033B333 /* Radiography.swift */,
 			);
 			path = RealityViews;
 			sourceTree = "<group>";
@@ -409,48 +400,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2D21553294D210B00634A99 /* Globe.swift in Sources */,
+				30C777F02B02613700463994 /* DrugModel.swift in Sources */,
+				C2D21553294D210B00634A99 /* Bone.swift in Sources */,
 				C25EFB7029DE7D1500D3CBB6 /* Entity+Trace.swift in Sources */,
 				C25AD07D29EC6C1E0012834D /* EarthEntity.swift in Sources */,
 				C200227F29883B3900732240 /* GlobeSettings.swift in Sources */,
-				C205CF952919C70D0067444C /* Starfield.swift in Sources */,
-				C2A823602A859109006F6AFF /* OrbitToggle.swift in Sources */,
 				C200227D2988392F00732240 /* Entity+Sunlight.swift in Sources */,
 				C253D5772947E44200B292CA /* OrbitSettings.swift in Sources */,
 				308479D62AFD4AF300864F3E /* PatientHeartBeat.swift in Sources */,
-				C25617D829CCB6040064FD50 /* SolarSystemControls.swift in Sources */,
-				C205CF972919CD070067444C /* Sun.swift in Sources */,
+				30C777EA2B023C3000463994 /* Report.swift in Sources */,
 				C2F2CA362A391D6B00E1C2A2 /* SatelliteSettings.swift in Sources */,
 				C2C1C8DB29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift in Sources */,
-				C2A8235E2A858A1C006F6AFF /* SolarSystemToggle.swift in Sources */,
 				C2589191297625C90071BD5F /* PlacementGesturesModifier.swift in Sources */,
-				C2A823622A8591FC006F6AFF /* GlobeToggle.swift in Sources */,
-				C25774DE29E2401F00A75567 /* SolarSystemModule.swift in Sources */,
-				C25E9E7828EBB5430033B333 /* Earth.swift in Sources */,
+				C2A823622A8591FC006F6AFF /* RadiographyToggle.swift in Sources */,
+				C25774DE29E2401F00A75567 /* DrugsModule.swift in Sources */,
+				C25E9E7828EBB5430033B333 /* Radiography.swift in Sources */,
 				C25774D829E2361000A75567 /* TypeTextModifier.swift in Sources */,
 				C2F31EFE29CC02D7009742AD /* Module.swift in Sources */,
+				30C777EC2B0260CB00463994 /* DrugsList.swift in Sources */,
 				C2F2CA342A391D4200E1C2A2 /* EarthSettings.swift in Sources */,
 				C2F31EFC29CC01BC009742AD /* TableOfContents.swift in Sources */,
-				C2DEDA242996FAAB00F5265B /* GlobeControls.swift in Sources */,
+				C2DEDA242996FAAB00F5265B /* BoneControls.swift in Sources */,
 				C2E652D42919E41A007934BC /* SolarSystemSettings.swift in Sources */,
 				C2F31EF829CA8F4E009742AD /* Modules.swift in Sources */,
 				C20197A629E4805900C6A20F /* SatelliteEntity+Configuration.swift in Sources */,
-				C25774DB29E23F8D00A75567 /* GlobeModule.swift in Sources */,
+				C25774DB29E23F8D00A75567 /* ReportModule.swift in Sources */,
 				308479DA2AFD4BA200864F3E /* Patiens.swift in Sources */,
-				C25774E129E240EC00A75567 /* OrbitModule.swift in Sources */,
+				C25774E129E240EC00A75567 /* RadiographyModule.swift in Sources */,
 				30DBAA262AFE3E1600291226 /* PatientModel.swift in Sources */,
 				C2A0F2B029D115150009D46C /* SettingsButton.swift in Sources */,
 				308479D82AFD4B9400864F3E /* HealthData.swift in Sources */,
 				C22D1AF228EB403400CE0F8F /* WorldApp.swift in Sources */,
 				C2E652D62919EBAB007934BC /* ViewModel.swift in Sources */,
+				30C777EE2B02610800463994 /* Drugs.swift in Sources */,
 				C25774D629E219FE00A75567 /* DragRotationModifier.swift in Sources */,
 				C2B0AEED2994B35600021509 /* RotationSystem.swift in Sources */,
 				C2B0AEEF2994B39300021509 /* TraceSystem.swift in Sources */,
-				C2E652D8291B09AC007934BC /* SolarSystem.swift in Sources */,
 				C258918F2975EB7E0071BD5F /* SliderGridRow.swift in Sources */,
 				C2CD36432A3A7682003811D3 /* ModuleCard.swift in Sources */,
 				C20197A429E3D9C900C6A20F /* SatelliteEntity.swift in Sources */,
-				C255636A291D8A0300398FCE /* Orbit.swift in Sources */,
 				C2F31F0029CC0858009742AD /* ModuleDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

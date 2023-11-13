@@ -50,9 +50,9 @@ enum Module: String, Identifiable, CaseIterable, Equatable {
     var overview: String {
         switch self {
         case .report:
-            "You can’t feel it, but Earth is constantly in motion. All planets spin on an invisible axis: ours makes one full turn every 24 hours, bringing days and nights to our home.\n\nWhen your part of the world faces the Sun, it’s daytime; when it rotates away, we move into night. When you see a sunrise or sunset, you’re witnessing the Earth in motion.\n\nWant to explore Earth’s rotation and axial tilt? Check out our interactive 3D globe and be hands-on with Earth’s movements."
+            "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas, las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum."
         case .radiography:
-            "The Moon orbits the Earth in an elliptical orbit. It’s the most visible object in our sky, but it’s farther from us than you might think: on average, it's about 385,000 kilometers away!\n\nMost satellites orbit Earth in a tighter orbit — some only a few hundred miles above Earth’s surface. Satellites in lower orbits circle us faster: the Hubble Telescope is approximately 534 kilometers from Earth and completes almost 15 orbits in a day, while geostationary satellites circle Earth just once in 24 hours from about 36,000 kilometers away.\n\nGet up close with different types of orbits to learn how these objects move in space relative to Earth."
+            "Patient name: David Carmona Age: 51 years Sex: Male Reason for consultation: Pain and swelling in the left arm History: The patient suffered a fall from a ladder while painting his house two days ago. He did not go to the doctor immediately, but applied ice and took painkillers. However, the pain and swelling did not improve, and the patient noticed a deformity in the arm. Physical examination: The patient has a closed fracture of the diaphysis of the left humerus, with displacement and angulation of the bone fragments. A bruise is observed in the elbow region and a limitation of the mobility of the arm. The patient reports intense pain to the touch and passive mobilization. No signs of vascular or nervous compromise are evident. Complementary tests: An X-ray of the left arm was performed, which confirmed the fracture and showed the degree of displacement and angulation of the fragments. "
         case .drugs:
             "Every 365¼ days, Earth and its satellites completely orbit the Sun — the star that anchors our solar system. It’s a journey of about 940 million kilometers a year!\n\nOn its journey, the Earth moves counter-clockwise in a slightly elliptical orbit. It travels a path called the ecliptic plane — an important part of how we navigate through our solar system.\n\nWant to explore Earth’s orbit in detail? Take a trip to the solar system and watch how Earth and its satellites move around the Sun."
         }
@@ -60,7 +60,7 @@ enum Module: String, Identifiable, CaseIterable, Equatable {
 
     var callToAction: String {
         switch self {
-        case .report: "View Globe"
+        case .report: "View Bone"
         case .radiography: "View Orbits"
         case .drugs: "View Outer Space"
         }

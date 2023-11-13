@@ -10,7 +10,7 @@ import RealityKit
 import WorldAssets
 
 /// The model of the Earth.
-struct Earth: View {
+struct Radiography: View {
     var earthConfiguration: EarthEntity.Configuration = .init()
     var satelliteConfiguration: [SatelliteEntity.Configuration] = []
     var moonConfiguration: SatelliteEntity.Configuration? = nil
@@ -53,7 +53,7 @@ struct Earth: View {
 }
 
 #Preview {
-    Earth(
+    Radiography(
         earthConfiguration: EarthEntity.Configuration.orbitEarthDefault,
         satelliteConfiguration: [
             SatelliteEntity.Configuration(

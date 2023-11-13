@@ -8,7 +8,7 @@ Controls that people can use to manipulate the globe in a volume.
 import SwiftUI
 
 /// Controls that people can use to manipulate the globe in a volume.
-struct GlobeControls: View {
+struct BoneControls: View {
     @Environment(ViewModel.self) private var model
     @State private var isTiltPickerVisible: Bool = false
 
@@ -25,10 +25,6 @@ struct GlobeControls: View {
             HStack(spacing: 17) {
                 Toggle(isOn: $model.globeEarth.showSun) {
                     Label("Sun", systemImage: "sun.max")
-                }
-
-                Toggle(isOn: $model.globeEarth.showPoles) {
-                    Label("Poles", systemImage: "mappin.and.ellipse")
                 }
 
                 Toggle(isOn: $model.isGlobeRotating) {
@@ -139,6 +135,6 @@ enum GlobeTilt: String, CaseIterable, Identifiable {
 }
 
 #Preview {
-    GlobeControls()
+    BoneControls()
         .environment(ViewModel())
 }

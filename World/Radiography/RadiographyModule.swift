@@ -1,25 +1,16 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-The module detail content that's specific to the orbit module.
-*/
-
 import SwiftUI
 import RealityKit
 import WorldAssets
 
 private let modelDepth: Double = 200
 
-/// The list of 3D models to display in the winow.
 private enum Item: String, CaseIterable, Identifiable {
-    case Bones, moon, telescope
+    case Bones
     var id: Self { self }
     var name: String { rawValue.capitalized }
 }
 
-/// The module detail content that's specific to the orbit module.
-struct OrbitModule: View {
+struct RadiographyModule: View {
     @Environment(ViewModel.self) private var model
     @State private var selection: Item = .Bones
 
@@ -30,18 +21,10 @@ struct OrbitModule: View {
                     ItemView(item: .Bones, orientation: [0.15, 0, 0.15])
                         .opacity(selection == .Bones ? 1 : 0)
                 }
-                .overlay {
-                    ItemView(item: .moon)
-                        .opacity(selection == .moon ? 1 : 0)
-                }
-                .overlay {
-                    ItemView(item: .telescope, orientation: [-0.3, 0, 0])
-                        .opacity(selection == .telescope ? 1 : 0)
-                }
                 .dragRotation(yawLimit: .degrees(20), pitchLimit: .degrees(20))
                 .offset(z: modelDepth)
 
-            Picker("Satellite", selection: $selection) {
+            Picker("Bones", selection: $selection) {
                 ForEach(Item.allCases) { item in
                     Text(item.name)
                 }
@@ -53,7 +36,6 @@ struct OrbitModule: View {
     }
 }
 
-/// A 3D model loaded from the app's asset bundle.
 private struct ItemView: View {
     var item: Item
     var orientation: SIMD3<Double> = .zero
@@ -78,7 +60,7 @@ private struct ItemView: View {
 }
 
 #Preview {
-    OrbitModule()
+    RadiographyModule()
         .padding()
         .environment(ViewModel())
 }
