@@ -16,8 +16,8 @@ struct RadiographyToggle: View {
     var body: some View {
         @Bindable var model = model
 
-        Toggle(Module.report.callToAction, isOn: $model.isShowingGlobe)
-            .onChange(of: model.isShowingGlobe) { _, isShowing in
+        Toggle(Module.report.callToAction, isOn: $model.isShowingBone)
+            .onChange(of: model.isShowingBone) { _, isShowing in
                 if isShowing {
                     openWindow(id: Module.report.name)
                 } else {

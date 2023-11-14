@@ -33,7 +33,7 @@ struct Modules: View {
         // Close any open detail view when returning to the table of contents.
         .onChange(of: model.navigationPath) { _, path in
             if path.isEmpty {
-                if model.isShowingGlobe {
+                if model.isShowingBone {
                     dismissWindow(id: Module.report.name)
                 }
             }

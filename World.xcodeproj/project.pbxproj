@@ -26,11 +26,11 @@
 		C25774DE29E2401F00A75567 /* DrugsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774DD29E2401F00A75567 /* DrugsModule.swift */; };
 		C25774E129E240EC00A75567 /* RadiographyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25774E029E240EC00A75567 /* RadiographyModule.swift */; };
 		C2589191297625C90071BD5F /* PlacementGesturesModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2589190297625C90071BD5F /* PlacementGesturesModifier.swift */; };
-		C25AD07D29EC6C1E0012834D /* EarthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25AD07C29EC6C1E0012834D /* EarthEntity.swift */; };
+		C25AD07D29EC6C1E0012834D /* RadiographyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25AD07C29EC6C1E0012834D /* RadiographyEntity.swift */; };
 		C25E9E7828EBB5430033B333 /* Radiography.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E9E7728EBB5430033B333 /* Radiography.swift */; };
 		C2A823622A8591FC006F6AFF /* RadiographyToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A823612A8591FC006F6AFF /* RadiographyToggle.swift */; };
 		C2A8375F2A2527DB00AD11D6 /* WorldAssets in Frameworks */ = {isa = PBXBuildFile; productRef = C2A8375E2A2527DB00AD11D6 /* WorldAssets */; };
-		C2C1C8DB29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1C8DA29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift */; };
+		C2C1C8DB29ECA8CC00DA5D97 /* RadiographyEntity+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C1C8DA29ECA8CC00DA5D97 /* RadiographyEntity+Configuration.swift */; };
 		C2CD36432A3A7682003811D3 /* ModuleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD36422A3A7682003811D3 /* ModuleCard.swift */; };
 		C2D21553294D210B00634A99 /* Bone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D21552294D210B00634A99 /* Bone.swift */; };
 		C2DEDA242996FAAB00F5265B /* BoneControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DEDA232996FAAB00F5265B /* BoneControls.swift */; };
@@ -66,11 +66,11 @@
 		C25774E029E240EC00A75567 /* RadiographyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiographyModule.swift; sourceTree = "<group>"; };
 		C2589190297625C90071BD5F /* PlacementGesturesModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementGesturesModifier.swift; sourceTree = "<group>"; };
 		C25A1C9C28EB495E00B0E173 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		C25AD07C29EC6C1E0012834D /* EarthEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthEntity.swift; sourceTree = "<group>"; };
+		C25AD07C29EC6C1E0012834D /* RadiographyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiographyEntity.swift; sourceTree = "<group>"; };
 		C25E9E7728EBB5430033B333 /* Radiography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radiography.swift; sourceTree = "<group>"; };
 		C2A823612A8591FC006F6AFF /* RadiographyToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiographyToggle.swift; sourceTree = "<group>"; };
 		C2A837612A25286A00AD11D6 /* WorldAssets */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WorldAssets; sourceTree = "<group>"; };
-		C2C1C8DA29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EarthEntity+Configuration.swift"; sourceTree = "<group>"; };
+		C2C1C8DA29ECA8CC00DA5D97 /* RadiographyEntity+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadiographyEntity+Configuration.swift"; sourceTree = "<group>"; };
 		C2CD36422A3A7682003811D3 /* ModuleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleCard.swift; sourceTree = "<group>"; };
 		C2D21552294D210B00634A99 /* Bone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bone.swift; sourceTree = "<group>"; };
 		C2DEDA232996FAAB00F5265B /* BoneControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoneControls.swift; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 		C22CF1A829721FB100CF2EB7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				C25AD07C29EC6C1E0012834D /* EarthEntity.swift */,
-				C2C1C8DA29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift */,
+				C25AD07C29EC6C1E0012834D /* RadiographyEntity.swift */,
+				C2C1C8DA29ECA8CC00DA5D97 /* RadiographyEntity+Configuration.swift */,
 				C200227C2988392F00732240 /* Entity+Sunlight.swift */,
 			);
 			path = Entities;
@@ -350,11 +350,11 @@
 			files = (
 				30C777F02B02613700463994 /* DrugModel.swift in Sources */,
 				C2D21553294D210B00634A99 /* Bone.swift in Sources */,
-				C25AD07D29EC6C1E0012834D /* EarthEntity.swift in Sources */,
+				C25AD07D29EC6C1E0012834D /* RadiographyEntity.swift in Sources */,
 				C200227D2988392F00732240 /* Entity+Sunlight.swift in Sources */,
 				308479D62AFD4AF300864F3E /* PatientHeartBeat.swift in Sources */,
 				30C777EA2B023C3000463994 /* Report.swift in Sources */,
-				C2C1C8DB29ECA8CC00DA5D97 /* EarthEntity+Configuration.swift in Sources */,
+				C2C1C8DB29ECA8CC00DA5D97 /* RadiographyEntity+Configuration.swift in Sources */,
 				C2589191297625C90071BD5F /* PlacementGesturesModifier.swift in Sources */,
 				C2A823622A8591FC006F6AFF /* RadiographyToggle.swift in Sources */,
 				C25774DE29E2401F00A75567 /* DrugsModule.swift in Sources */,

@@ -11,17 +11,17 @@ import WorldAssets
 
 /// The model of the Earth.
 struct Radiography: View {
-    var earthConfiguration: EarthEntity.Configuration = .init()
+    var earthConfiguration: RadiographyEntity.Configuration = .init()
     var animateUpdates: Bool = false
     var axCustomActionHandler: ((_: AccessibilityEvents.CustomAction) -> Void)? = nil
 
     /// The Earth entity that the view creates and stores for later updates.
-    @State private var earthEntity: EarthEntity?
+    @State private var earthEntity: RadiographyEntity?
 
     var body: some View {
         RealityView { content in
             // Create an earth entity with tilt, rotation, a moon, and so on.
-            let earthEntity = await EarthEntity(
+            let earthEntity = await RadiographyEntity(
                 configuration: earthConfiguration)
             content.add(earthEntity)
 

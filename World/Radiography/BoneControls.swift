@@ -17,11 +17,11 @@ struct BoneControls: View {
 
         VStack(alignment: .tiltButtonGuide) {
             HStack(spacing: 17) {
-                Toggle(isOn: $model.globeEarth.showSun) {
+                Toggle(isOn: $model.bone.showSun) {
                     Label("Sun", systemImage: "sun.max")
                 }
 
-                Toggle(isOn: $model.isGlobeRotating) {
+                Toggle(isOn: $model.isBoneRotating) {
                     Label("Rotate", systemImage: "arrow.triangle.2.circlepath")
                 }
             }

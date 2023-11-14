@@ -1,39 +1,26 @@
 import SwiftUI
 
-extension EarthEntity {
+extension RadiographyEntity {
     /// Configuration information for Earth entities.
     struct Configuration {
-        var isCloudy: Bool = false
 
-        var scale: Float = 4.0
+        var scale: Float = 5.0
         var rotation: simd_quatf = .init(angle: 0, axis: [0, 1, 0])
         var speed: Float = 0
-        var isPaused: Bool = false
         var position: SIMD3<Float> = .zero
-        var date: Date? = nil
-
-        var showPoles: Bool = false
-        var poleLength: Float = 0.875
-        var poleThickness: Float = 0.75
 
         var showSun: Bool = true
-        var sunIntensity: Float = 14
+        var sunIntensity: Float = 8
         var sunAngle: Angle = .degrees(280)
 
         var axActions: [LocalizedStringResource] = []
-        var axDescribeTilt: Bool = false
-
-        var currentSpeed: Float {
-            isPaused ? 0 : speed
-        }
 
         var currentSunIntensity: Float? {
             showSun ? sunIntensity : nil
         }
 
-        static var globeEarthDefault: Configuration = .init(
-            axActions: AccessibilityActions.rotate,
-            axDescribeTilt: true
+        static var boneDefault: Configuration = .init(
+            axActions: AccessibilityActions.rotate
         )
     }
 
