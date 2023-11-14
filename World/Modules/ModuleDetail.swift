@@ -1,13 +1,5 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A detail view that presents information about different module types.
-*/
-
 import SwiftUI
 
-/// A detail view that presents information about different module types.
 struct ModuleDetail: View {
     @Environment(ViewModel.self) private var model
 

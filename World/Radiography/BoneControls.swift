@@ -1,13 +1,5 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-Controls that people can use to manipulate the globe in a volume.
-*/
-
 import SwiftUI
 
-/// Controls that people can use to manipulate the globe in a volume.
 struct BoneControls: View {
     @Environment(ViewModel.self) private var model
     @State private var isTiltPickerVisible: Bool = false
@@ -39,14 +31,12 @@ struct BoneControls: View {
 }
 
 extension HorizontalAlignment {
-    /// A custom alignment to center the tilt menu over its button.
     private struct TiltButtonAlignment: AlignmentID {
         static func defaultValue(in context: ViewDimensions) -> CGFloat {
             context[HorizontalAlignment.center]
         }
     }
 
-    /// A custom alignment guide to center the tilt menu over its button.
     fileprivate static let tiltButtonGuide = HorizontalAlignment(
         TiltButtonAlignment.self
     )

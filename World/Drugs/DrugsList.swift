@@ -66,7 +66,7 @@ struct DrugsList: View {
                 }
             }
             Button(action: {
-                resetValues() // Llama a la función para restablecer los valores
+                resetValues()
             }) {
                 Text("Send")
                     .font(.title)

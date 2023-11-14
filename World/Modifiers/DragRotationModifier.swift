@@ -1,16 +1,7 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A modifier for turning drag gestures into rotation.
-*/
-
 import SwiftUI
 import RealityKit
 
 extension View {
-    /// Enables people to drag an entity to rotate it, with optional limitations
-    /// on the rotation in yaw and pitch.
     func dragRotation(
         yawLimit: Angle? = nil,
         pitchLimit: Angle? = nil,
@@ -30,7 +21,6 @@ extension View {
     }
 }
 
-/// A modifier converts drag gestures into entity rotation.
 private struct DragRotationModifier: ViewModifier {
     var yawLimit: Angle?
     var pitchLimit: Angle?
@@ -50,27 +40,22 @@ private struct DragRotationModifier: ViewModifier {
             .gesture(DragGesture(minimumDistance: 0.0)
                 .targetedToAnyEntity()
                 .onChanged { value in
-                    // Find the current linear displacement.
                     let location3D = value.convert(value.location3D, from: .local, to: .scene)
                     let startLocation3D = value.convert(value.startLocation3D, from: .local, to: .scene)
                     let delta = location3D - startLocation3D
 
-                    // Use an interactive spring animation that becomes
-                    // a spring animation when the gesture ends below.
                     withAnimation(.interactiveSpring) {
                         yaw = spin(displacement: Double(delta.x), base: baseYaw, limit: yawLimit)
                         pitch = spin(displacement: Double(delta.y), base: basePitch, limit: pitchLimit)
                     }
                 }
                 .onEnded { value in
-                    // Find the current and predicted final linear displacements.
                     let location3D = value.convert(value.location3D, from: .local, to: .scene)
                     let startLocation3D = value.convert(value.startLocation3D, from: .local, to: .scene)
                     let predictedEndLocation3D = value.convert(value.predictedEndLocation3D, from: .local, to: .scene)
                     let delta = location3D - startLocation3D
                     let predictedDelta = predictedEndLocation3D - location3D
 
-                    // Set the final spin value using a spring animation.
                     withAnimation(.spring) {
                         yaw = finalSpin(
                             displacement: Double(delta.x),
@@ -84,7 +69,6 @@ private struct DragRotationModifier: ViewModifier {
                             limit: pitchLimit)
                     }
 
-                    // Store the last value for use by the next gesture.
                     baseYaw = yaw
                     basePitch = pitch
                 }
@@ -103,8 +87,6 @@ private struct DragRotationModifier: ViewModifier {
             }
     }
 
-    /// Finds the spin for the specified linear displacement, subject to an
-    /// optional limit.
     private func spin(
         displacement: Double,
         base: Double,
@@ -117,22 +99,17 @@ private struct DragRotationModifier: ViewModifier {
         }
     }
 
-    /// Finds the final spin given the current and predicted final linear
-    /// displacements, or zero when the spin is restricted.
     private func finalSpin(
         displacement: Double,
         predictedDisplacement: Double,
         base: Double,
         limit: Angle?
     ) -> Double {
-        // If there is a spin limit, always return to zero spin at the end.
         guard limit == nil else { return 0 }
 
-        // Find the projected final linear displacement, capped at 1 more revolution.
         let cap = .pi * 2.0 / sensitivity
         let delta = displacement + max(-cap, min(cap, predictedDisplacement))
 
-        // Find the final spin.
         return base + delta * sensitivity
     }
 }

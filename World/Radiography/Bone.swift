@@ -1,13 +1,5 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-The globe content for a volume.
-*/
-
 import SwiftUI
 
-/// The globe content for a volume.
 struct Bone: View {
     @Environment(ViewModel.self) private var model
 
@@ -47,14 +39,12 @@ struct Bone: View {
 }
 
 extension HorizontalAlignment {
-    /// A custom alignment to center the control panel under the globe.
     private struct ControlPanelAlignment: AlignmentID {
         static func defaultValue(in context: ViewDimensions) -> CGFloat {
             context[HorizontalAlignment.center]
         }
     }
 
-    /// A custom alignment guide to center the control panel under the globe.
     static let controlPanelGuide = HorizontalAlignment(
         ControlPanelAlignment.self
     )

@@ -1,13 +1,5 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A card that displays a navigation destination.
-*/
-
 import SwiftUI
 
-/// A card that displays a navigation destination.
 struct ModuleCard: View {
     var module: Module
 

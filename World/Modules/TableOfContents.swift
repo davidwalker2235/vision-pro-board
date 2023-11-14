@@ -1,13 +1,5 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-The launching point for the app's modules.
-*/
-
 import SwiftUI
 
-/// The launching point for the app's modules.
 struct TableOfContents: View {
     @Environment(ViewModel.self) private var model
 
@@ -43,7 +35,6 @@ struct TableOfContents: View {
     }
 }
 
-/// The text that displays the app's title.
 private struct TitleText: View {
     var title: String
     var body: some View {
@@ -54,14 +45,12 @@ private struct TitleText: View {
 }
 
 extension VerticalAlignment {
-    /// A custom alignment that pins the background image to the title.
     private struct EarthAlignment: AlignmentID {
         static func defaultValue(in context: ViewDimensions) -> CGFloat {
             context[VerticalAlignment.top]
         }
     }
 
-    /// A custom alignment guide that pins the background image to the title.
     fileprivate static let earthGuide = VerticalAlignment(
         EarthAlignment.self
     )

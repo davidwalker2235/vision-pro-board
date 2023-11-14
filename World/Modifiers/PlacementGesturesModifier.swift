@@ -1,15 +1,7 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A modifier for placing objects.
-*/
-
 import SwiftUI
 import RealityKit
 
 extension View {
-    /// Listens for gestures and places an item based on those inputs.
     func placementGestures(
         initialPosition: Point3D = .zero,
         axZoomIn: Bool = false,
@@ -25,7 +17,6 @@ extension View {
     }
 }
 
-/// A modifier that adds gestures and positioning to a view.
 private struct PlacementGesturesModifier: ViewModifier {
     var initialPosition: Point3D
     var axZoomIn: Bool
@@ -45,7 +36,6 @@ private struct PlacementGesturesModifier: ViewModifier {
             .position(x: position.x, y: position.y)
             .offset(z: position.z)
 
-            // Enable people to move the model anywhere in their space.
             .simultaneousGesture(DragGesture(minimumDistance: 0.0, coordinateSpace: .global)
                 .handActivationBehavior(.pinch)
                 .onChanged { value in
@@ -61,7 +51,6 @@ private struct PlacementGesturesModifier: ViewModifier {
                 }
             )
 
-            // Enable people to scale the model within certain bounds.
             .simultaneousGesture(MagnifyGesture()
                 .onChanged { value in
                     if let startScale {

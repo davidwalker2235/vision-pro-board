@@ -1,13 +1,5 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A toggle that activates or deactivates the globe volume.
-*/
-
 import SwiftUI
 
-/// A toggle that activates or deactivates the globe volume.
 struct RadiographyToggle: View {
     @Environment(ViewModel.self) private var model
     @Environment(\.openWindow) private var openWindow

@@ -1,7 +1,6 @@
 import SwiftUI
 
 extension RadiographyEntity {
-    /// Configuration information for Earth entities.
     struct Configuration {
 
         var scale: Float = 5.0
@@ -24,11 +23,9 @@ extension RadiographyEntity {
         )
     }
 
-    /// Custom actions available to people using assistive technologies.
     enum AccessibilityActions {
         case zoomIn, zoomOut, rotateCW, rotateCCW
 
-        /// The name of the action that VoiceOver reads aloud.
         var name: LocalizedStringResource {
             switch self {
             case .zoomIn: "Zoom in"
@@ -38,12 +35,10 @@ extension RadiographyEntity {
             }
         }
 
-        /// The collection of zoom actions.
         static var zoom: [LocalizedStringResource] {
             [zoomIn.name, zoomOut.name]
         }
 
-        /// The collection of rotation actions.
         static var rotate: [LocalizedStringResource] {
             [rotateCW.name, rotateCCW.name]
         }
