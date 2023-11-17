@@ -8,7 +8,11 @@ struct WorldApp: App {
     @State private var solarImmersionStyle: ImmersionStyle = .full
 
     var body: some Scene {
-        WindowGroup("Patien", id: "modules") {
+        WindowGroup(id: "QrCode") {
+            QrCode()
+        }
+        .windowStyle(.plain)
+        WindowGroup(id: "modules") {
             Modules()
                 .environment(model)
         }

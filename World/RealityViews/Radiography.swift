@@ -7,13 +7,13 @@ struct Radiography: View {
     var animateUpdates: Bool = false
     var axCustomActionHandler: ((_: AccessibilityEvents.CustomAction) -> Void)? = nil
 
-    @State private var earthEntity: RadiographyEntity?
+    @State private var radiographyEntity: RadiographyEntity?
 
     var body: some View {
         RealityView { content in
-            let earthEntity = await RadiographyEntity(
+            let radiographyEntity = await RadiographyEntity(
                 configuration: earthConfiguration)
-            content.add(earthEntity)
+            content.add(radiographyEntity)
 
             if let axCustomActionHandler {
                 _ = content.subscribe(
@@ -23,10 +23,10 @@ struct Radiography: View {
                     axCustomActionHandler)
             }
 
-            self.earthEntity = earthEntity
+            self.radiographyEntity = radiographyEntity
 
         } update: { content in
-            earthEntity?.update(
+            radiographyEntity?.update(
                 configuration: earthConfiguration,
                 animateUpdates: animateUpdates)
         }

@@ -10,6 +10,7 @@
 		308479D62AFD4AF300864F3E /* PatientHeartBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308479D52AFD4AF300864F3E /* PatientHeartBeat.swift */; };
 		308479D82AFD4B9400864F3E /* HealthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308479D72AFD4B9400864F3E /* HealthData.swift */; };
 		308479DA2AFD4BA200864F3E /* Patiens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308479D92AFD4BA200864F3E /* Patiens.swift */; };
+		309B154C2B078DE000BC6B88 /* QrCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309B154B2B078DE000BC6B88 /* QrCode.swift */; };
 		30C777EA2B023C3000463994 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C777E92B023C3000463994 /* Report.swift */; };
 		30C777EC2B0260CB00463994 /* DrugsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C777EB2B0260CB00463994 /* DrugsList.swift */; };
 		30C777EE2B02610800463994 /* Drugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C777ED2B02610800463994 /* Drugs.swift */; };
@@ -45,6 +46,7 @@
 		308479D52AFD4AF300864F3E /* PatientHeartBeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientHeartBeat.swift; sourceTree = "<group>"; };
 		308479D72AFD4B9400864F3E /* HealthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthData.swift; sourceTree = "<group>"; };
 		308479D92AFD4BA200864F3E /* Patiens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patiens.swift; sourceTree = "<group>"; };
+		309B154B2B078DE000BC6B88 /* QrCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCode.swift; sourceTree = "<group>"; };
 		30C777E92B023C3000463994 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		30C777EB2B0260CB00463994 /* DrugsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsList.swift; sourceTree = "<group>"; };
 		30C777ED2B02610800463994 /* Drugs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drugs.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				C2F31EFB29CC01BC009742AD /* TableOfContents.swift */,
 				C2CD36422A3A7682003811D3 /* ModuleCard.swift */,
 				C2F31EFF29CC0858009742AD /* ModuleDetail.swift */,
+				309B154B2B078DE000BC6B88 /* QrCode.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				C2D21553294D210B00634A99 /* Bone.swift in Sources */,
 				C25AD07D29EC6C1E0012834D /* RadiographyEntity.swift in Sources */,
 				C200227D2988392F00732240 /* Entity+Sunlight.swift in Sources */,
+				309B154C2B078DE000BC6B88 /* QrCode.swift in Sources */,
 				308479D62AFD4AF300864F3E /* PatientHeartBeat.swift in Sources */,
 				30C777EA2B023C3000463994 /* Report.swift in Sources */,
 				C2C1C8DB29ECA8CC00DA5D97 /* RadiographyEntity+Configuration.swift in Sources */,
