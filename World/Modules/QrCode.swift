@@ -16,10 +16,9 @@ struct QrCode: View {
         Button(action: {
             openWindow(id: "modules")
         }) {
-            // Contenido del botón (en este caso, una imagen)
-            Image(systemName: "square.grid.2x2")
+            Image("QRCode")
                 .resizable()
-                .frame(width: 30, height: 30)
+                .frame(width: 100, height: 100)
         }
     }
 }

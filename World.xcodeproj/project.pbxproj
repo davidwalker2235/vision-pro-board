@@ -10,6 +10,7 @@
 		308479D62AFD4AF300864F3E /* PatientHeartBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308479D52AFD4AF300864F3E /* PatientHeartBeat.swift */; };
 		308479D82AFD4B9400864F3E /* HealthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308479D72AFD4B9400864F3E /* HealthData.swift */; };
 		308479DA2AFD4BA200864F3E /* Patiens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308479D92AFD4BA200864F3E /* Patiens.swift */; };
+		3095B13D2B07BCF000441C60 /* Sunlight.skybox in Resources */ = {isa = PBXBuildFile; fileRef = 3095B13C2B07BCF000441C60 /* Sunlight.skybox */; };
 		309B154C2B078DE000BC6B88 /* QrCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309B154B2B078DE000BC6B88 /* QrCode.swift */; };
 		30C777EA2B023C3000463994 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C777E92B023C3000463994 /* Report.swift */; };
 		30C777EC2B0260CB00463994 /* DrugsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C777EB2B0260CB00463994 /* DrugsList.swift */; };
@@ -17,7 +18,6 @@
 		30C777F02B02613700463994 /* DrugModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C777EF2B02613700463994 /* DrugModel.swift */; };
 		30DBAA262AFE3E1600291226 /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBAA252AFE3E1600291226 /* PatientModel.swift */; };
 		C200227D2988392F00732240 /* Entity+Sunlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C200227C2988392F00732240 /* Entity+Sunlight.swift */; };
-		C20A898F2A37D93C004E8608 /* Sunlight.skybox in Resources */ = {isa = PBXBuildFile; fileRef = C20A898E2A37D93C004E8608 /* Sunlight.skybox */; };
 		C22D1AF228EB403400CE0F8F /* WorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22D1AF128EB403400CE0F8F /* WorldApp.swift */; };
 		C22D1AF628EB403600CE0F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22D1AF528EB403600CE0F8F /* Assets.xcassets */; };
 		C22D1AF928EB403600CE0F8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22D1AF828EB403600CE0F8F /* Preview Assets.xcassets */; };
@@ -46,6 +46,7 @@
 		308479D52AFD4AF300864F3E /* PatientHeartBeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientHeartBeat.swift; sourceTree = "<group>"; };
 		308479D72AFD4B9400864F3E /* HealthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthData.swift; sourceTree = "<group>"; };
 		308479D92AFD4BA200864F3E /* Patiens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patiens.swift; sourceTree = "<group>"; };
+		3095B13C2B07BCF000441C60 /* Sunlight.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = Sunlight.skybox; sourceTree = "<group>"; };
 		309B154B2B078DE000BC6B88 /* QrCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCode.swift; sourceTree = "<group>"; };
 		30C777E92B023C3000463994 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		30C777EB2B0260CB00463994 /* DrugsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsList.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		6FD03BD460C2666C0917AC9F /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		BA5D813EE652D2B6F9AA7B35 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		C200227C2988392F00732240 /* Entity+Sunlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+Sunlight.swift"; sourceTree = "<group>"; };
-		C20A898E2A37D93C004E8608 /* Sunlight.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = Sunlight.skybox; sourceTree = "<group>"; };
 		C22D1AEE28EB403400CE0F8F /* World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = World.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22D1AF128EB403400CE0F8F /* WorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldApp.swift; sourceTree = "<group>"; };
 		C22D1AF528EB403600CE0F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -234,8 +234,8 @@
 		C2A51FAE29AB0AEB00217068 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3095B13C2B07BCF000441C60 /* Sunlight.skybox */,
 				C22D1AF528EB403600CE0F8F /* Assets.xcassets */,
-				C20A898E2A37D93C004E8608 /* Sunlight.skybox */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -338,8 +338,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C20A898F2A37D93C004E8608 /* Sunlight.skybox in Resources */,
 				C22D1AF928EB403600CE0F8F /* Preview Assets.xcassets in Resources */,
+				3095B13D2B07BCF000441C60 /* Sunlight.skybox in Resources */,
 				C22D1AF628EB403600CE0F8F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

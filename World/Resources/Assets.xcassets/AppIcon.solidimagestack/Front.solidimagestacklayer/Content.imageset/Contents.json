@@ -1,8 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "Front.png",
-      "idiom" : "reality",
+      "filename" : "redCross.png",
+      "idiom" : "vision",
       "scale" : "2x"
     }
   ],
